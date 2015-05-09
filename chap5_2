@@ -1,0 +1,36 @@
+package System.out;
+import java.util.Scanner;
+
+public class chap5_2 {
+	
+	public static int sumDigits(long n){
+		
+		/*covert Long n to String and get determine the number of digits*/
+		String temp = String.valueOf(n);
+		int length = temp.length();
+		int count = 0;
+		int sum = 0;
+	
+		do{
+			count++;
+			sum = sum + (int) (n % 10);
+			n = n / 10;
+		} while (count <= length);
+		
+		return sum;
+	}
+	
+	
+	public static void main (String[] args){
+		
+		System.out.print("Please enter the digit. For example: (234)");
+		Scanner input = new Scanner (System.in);
+		
+		long entry = input.nextLong();
+		int result = sumDigits(entry);
+		
+		System.out.print(" The sum is " + result);
+		
+	}
+	
+}
