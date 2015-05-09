@@ -1,0 +1,27 @@
+package System.out;
+
+public class chap5_1 {
+	
+	public static int getPentagonalNumber(int n){
+		int number= n*(3*n - 1)/2;	
+		return number;
+		}
+	
+	public static void main (String[] args){
+		int k=100;
+		int count=0;
+		
+		while(count < k){
+		count++;
+		int P_number = getPentagonalNumber(count);
+			
+		if ( count%11 == 0  ){
+		System.out.print("\n");}
+		
+		else 
+		System.out.print( P_number+ " ");
+		}
+
+	}
+	
+}
